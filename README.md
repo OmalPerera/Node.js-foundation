@@ -1,48 +1,61 @@
 # Node.js foundation course
 
-File System
-var fs = require('fs')
+## **Chapter 05 - File System**
 
+In Order to use this module
 
-fs.readdir(path[, options], callback)
-path <String> | <Buffer>
-options <String> | <Object>
-encoding <String> default = 'utf8'
-callback <Function>
+    var fs = require('fs');
+
+### Lesson 01-1 - Reading Contents of a directory Asynchronously
+
+    fs.readdir(path[, options], callback)
+
+* _path `<String>` | `<Buffer>`_<br>
+* _options `<String>` | `<Object>`_<br>
+* _encoding `<String>` default = 'utf8'`_<br>
+* _callback `<Function>`_<br>
 
 The callback gets two arguments (err, files) where files is an array of the names of the files
 
-https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback
+[https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback](https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback)
 
+<br>
 
+### Lesson 01-2 - Reading Contents of a directory Synchronously
 
+    fs.readdirSync(path[, options])
 
-fs.readdirSync(path[, options])
-path <String> | <Buffer>
-options <String> | <Object>
-encoding <String> default = 'utf8'
+* _path `<String>` | `<Buffer>`_<br>
+* _options `<String>` | `<Object>`_<br>
+* _encoding `<String>` default = 'utf8'`_<br>
 
-https://nodejs.org/api/fs.html#fs_fs_readdirsync_path_options
+[https://nodejs.org/api/fs.html#fs_fs_readdirsync_path_options]
+(https://nodejs.org/api/fs.html#fs_fs_readdirsync_path_options)
 
+<br>
 
+### Lesson 02-1 - Reading Contents of a file
 
-fs.readFile(file[, options], callback)
-file <String> | <Buffer> | <Integer> filename or file descriptor
-options <Object> | <String>
-encoding <String> | <Null> default = null
-flag <String> default = 'r'
-callback <Function>
+    fs.readFile(file[, options], callback)
 
-Asynchronously reads the entire contents of a file
+* _file `<String>` | `<Buffer>` | `<Integer>` filename or file descriptor_<br>
+* _options `<Object>` | `<String>`_<br>
+* _encoding `<String>` | `<Null>` default = null_<br>
+* _flag `<String>` default = 'r'_<br>
+* _callback `<Function>`_<br>
 
-fs.readFile('/etc/passwd', (err, data) => {
-  if (err) throw err;
-  console.log(data);
-});
+Example
 
-https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback
+    fs.readFile('/etc/passwd', (err, data) => {
+        if (err) throw err;
+        console.log(data);
+    });
 
+[https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback]
+(https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback)
 
+<br>
+<br>
 
 fs.readFileSync(file[, options])
 file <String> | <Buffer> | <Integer> filename or file descriptor
