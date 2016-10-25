@@ -34,7 +34,7 @@ The callback gets two arguments (err, files) where files is an array of the name
 
 <br>
 
-### Lesson 02-1 - Reading Contents of a file
+### Lesson 02-1 - Reading Contents of a file Asynchronusly
 
     fs.readFile(file[, options], callback)
 
@@ -55,43 +55,50 @@ Example
 (https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback)
 
 <br>
-<br>
 
-fs.readFileSync(file[, options])
-file <String> | <Buffer> | <Integer> filename or file descriptor
-options <Object> | <String>
-encoding <String> | <Null> default = null
-flag <String> default = 'r'
+### Lesson 02-2 - Reading Contents of a file Synchronusly
+
+    fs.readFileSync(file[, options])
+    
+* _file `<String>` | `<Buffer>` | `<Integer>` filename or file descriptor_<br>
+* _options `<Object>` | `<String>`_<br>
+* _encoding `<String>` | `<Null>` default = null_<br>
+* _flag `<String>` default = 'r'_<br>
 
 Synchronous version of fs.readFile. Returns the contents of the file
 If the encoding option is specified then this function returns a string. Otherwise it returns a buffer.
 
-https://nodejs.org/api/fs.html#fs_fs_readfilesync_file_options
+[https://nodejs.org/api/fs.html#fs_fs_readfilesync_file_options]
+(https://nodejs.org/api/fs.html#fs_fs_readfilesync_file_options)
 
+<br>
 
+### Lesson 03-1 - Writing Contents to a file Synchronusly
 
-fs.writeFile(file, data[, options], callback)
-file <String> | <Buffer> | <Integer> filename or file descriptor
-data <String> | <Buffer>
-options <Object> | <String>
-encoding <String> | <Null> default = 'utf8'
-mode <Integer> default = 0o666
-flag <String> default = 'w'
-callback <Function>
+    fs.writeFile(file, data[, options], callback)
+    
+* _file `<String>` | `<Buffer>` | `<Integer>` filename or file descriptor_<br>
+* _data `<String>` | `<Buffer>`_<br>
+* _options `<Object>` | `<String>`_<br>
+* _encoding `<String>` | `<Null>` default = 'utf8'_<br>
+* _mode `<Integer>` default = 0o666_<br>
+* _flag `<String>` default = 'w'_<br>
+* _callback `<Function>`_<br>
 
 Asynchronously writes data to a file, replacing the file if it already exists. data can be a string or a buffer.
 
 The encoding option is ignored if data is a buffer. It defaults to 'utf8'
 
-fs.writeFile('message.txt', 'Hello Node.js', (err) => {
-  if (err) throw err;
-  console.log('It\'s saved!');
-});
+    fs.writeFile('message.txt', 'Hello Node.js', (err) => {
+        if (err) throw err;
+            console.log('It\'s saved!');
+    });
 
 If options is a string, then it specifies the encoding. Example:
-fs.writeFile('message.txt', 'Hello Node.js', 'utf8', callback);
+    fs.writeFile('message.txt', 'Hello Node.js', 'utf8', callback);
 
-https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
+[https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback]
+(https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback)
 
 
 
