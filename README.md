@@ -100,30 +100,33 @@ If options is a string, then it specifies the encoding. Example:
 [https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback]
 (https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback)
 
+<br>
 
+### Lesson 04-1 - Apend data to a file Asynchronusly
 
-fs.appendFile(file, data[, options], callback)
-file <String> | <Buffer> | <Number> filename or file descriptor
-data <String> | <Buffer>
-options <Object> | <String>
-encoding <String> | <Null> default = 'utf8'
-mode <Integer> default = 0o666
-flag <String> default = 'a'
-callback <Function>
+    fs.appendFile(file, data[, options], callback)
+
+* _file `<String>` | `<Buffer>` | `<Number>` filename or file descriptor_<br>
+* _data `<String>` | `<Buffer>`_<br>
+* _options `<Object>` | `<String>`_<br>
+* _encoding `<String>` | `<Null>` default = 'utf8'_<br>
+* _mode `<Integer>` default = 0o666_<br>
+* _flag `<String>` default = 'a'_<br>
+* _callback `<Function>`_<br>
 
 Asynchronously append data to a file, creating the file if it does not yet exist. data can be a string or a buffer.
 
 Example:
 
-fs.appendFile('message.txt', 'data to append', (err) => {
-  if (err) throw err;
-  console.log('The "data to append" was appended to file!');
-});
+    fs.appendFile('message.txt', 'data to append', (err) => {
+      if (err) throw err;
+      console.log('The "data to append" was appended to file!');
+    });
 
-s.appendFile('message.txt', 'data to append', 'utf8', callback);
+    s.appendFile('message.txt', 'data to append', 'utf8', callback);
 
-https://nodejs.org/api/fs.html#fs_fs_appendfile_file_data_options_callback
-
+[https://nodejs.org/api/fs.html#fs_fs_appendfile_file_data_options_callback]
+(https://nodejs.org/api/fs.html#fs_fs_appendfile_file_data_options_callback)
 
 
 fs.appendFileSync(file, data[, options])
