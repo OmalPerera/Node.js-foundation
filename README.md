@@ -129,16 +129,18 @@ Example:
 (https://nodejs.org/api/fs.html#fs_fs_appendfile_file_data_options_callback)
 
 
-fs.appendFileSync(file, data[, options])
-* _file <String> | <Buffer> | <Number> filename or file descriptor
-* _data <String> | <Buffer>
-* _options <Object> | <String>
-* _encoding <String> | <Null> default = 'utf8'
-* _mode <Integer> default = 0o666
-* _flag <String> default = 'a'
+    fs.appendFileSync(file, data[, options])
+    
+* _file `<String>` | `<Buffer>` | `<Number>` filename or file descriptor_<br>
+* _data `<String>` | `<Buffer>`_<br>
+* _options `<Object>` | `<String>`_<br>
+* _encoding `<String>` | `<Null>` default = 'utf8'_<br>
+* _mode `<Integer>` default = 0o666_<br>
+* _flag `<String>` default = 'a'_<br>
 The synchronous version of fs.appendFile(). Returns undefined.
 
-https://nodejs.org/api/fs.html#fs_fs_appendfilesync_file_data_options
+[https://nodejs.org/api/fs.html#fs_fs_appendfilesync_file_data_options]
+(https://nodejs.org/api/fs.html#fs_fs_appendfilesync_file_data_options)
 
 
 remove files
