@@ -102,7 +102,7 @@ If options is a string, then it specifies the encoding. Example:
 
 <br>
 
-### Lesson 04-1 - Apend data to a file Asynchronusly
+### Lesson 04-1 - Append data to a file Asynchronusly
 
     fs.appendFile(file, data[, options], callback)
 
@@ -128,6 +128,9 @@ Example:
 [https://nodejs.org/api/fs.html#fs_fs_appendfile_file_data_options_callback]
 (https://nodejs.org/api/fs.html#fs_fs_appendfile_file_data_options_callback)
 
+<br>
+
+### Lesson 04-2 - Append data to a file Synchronusly
 
     fs.appendFileSync(file, data[, options])
     
@@ -142,21 +145,27 @@ The synchronous version of fs.appendFile(). Returns undefined.
 [https://nodejs.org/api/fs.html#fs_fs_appendfilesync_file_data_options]
 (https://nodejs.org/api/fs.html#fs_fs_appendfilesync_file_data_options)
 
+<br>
 
-remove files
-fs.unlinkSync(path)
-path <String> | <Buffer>
-https://nodejs.org/api/fs.html#fs_fs_unlinksync_path
+### Lesson 05-5 - Removing Files (Deleting) & Renaming
+
+    fs.unlinkSync(path)
+    
+* _path `<String>` | `<Buffer>`
+
+[https://nodejs.org/api/fs.html#fs_fs_unlinksync_path]
+(https://nodejs.org/api/fs.html#fs_fs_unlinksync_path)
 
 
 
-fs.rename(oldPath, newPath, callback)
-oldPath <String> | <Buffer>
-newPath <String> | <Buffer>
-callback <Function>
+    fs.rename(oldPath, newPath, callback)
+    
+* _oldPath `<String>` | `<Buffer>`<br>
+* _newPath `<String>` | `<Buffer>`<br>
+* _callback `<Function>`
 
-https://nodejs.org/api/fs.html#fs_fs_rename_oldpath_newpath_callback
-
+[https://nodejs.org/api/fs.html#fs_fs_rename_oldpath_newpath_callback]
+(https://nodejs.org/api/fs.html#fs_fs_rename_oldpath_newpath_callback)
 
 
 fs.renameSync(oldPath, newPath)
